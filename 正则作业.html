@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="box" value="" />
+<input type="button" value="验证邮箱地址" onclick="isEmail(document.getElementById('box').value);" />
+</body>
+<script>
+    var str=prompt("请输入电话号码");
+    var reg=/[0-9]{11}/;
+    if(reg.test(str)==false){
+        alert("您输入的有错误")
+    }else {
+        alert("恭喜您输入成功");
+    }
+
+function isEmail(str) {
+     var reg1=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+     if(reg1.test(str)){
+         alert("验证成功");
+      return true
+    }else {
+       alert("您输入的电子表格不正确");
+         return false;
+    }
+ }
+
+
+</script>
+</html>
